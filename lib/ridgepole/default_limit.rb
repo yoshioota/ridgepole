@@ -23,7 +23,7 @@ module Ridgepole
       end
 
       def adapter
-        ActiveRecord::Base.connection_config.fetch(:adapter).to_sym
+        ActiveRecord::Base.connection_db_config.adapter.to_sym
       rescue ActiveRecord::ConnectionNotEstablished
         nil
       end
